@@ -32,13 +32,13 @@ Additional considerations:
 **RUBRIC REFERENCE LINK:** https://github.com/alchemycodelab/poll-tracker-supabase-demo
 
 **GENERAL GAMEPLAN**
-1. Get general plan figured out through wireframes and deploy to netlify
-2. Get supabase set up with columns and user auth
-3. work on getting login page all set up and working
-4. set up fetch-utils.js
-5. set up polls folder and app.js
-6. rig up render utils and export to /polls/apps.js
-7. finish app.js in polls and bug hunt
-8. CSS
-9. **polish**
-10. profit
+1. Get general plan figured out through wireframes and deploy to netlify [✔️]
+2. Get supabase set up with columns and user auth [✔️]
+3. fetch-utils []
+4. work on getting login page all set up and working []
+5. set up polls folder and app.js []
+6. rig up render utils and export to /polls/apps.js []
+7. finish app.js in polls and bug hunt []
+8. CSS []
+9. **polish** []
+10. profit []
