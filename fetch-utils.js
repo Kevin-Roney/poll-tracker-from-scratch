@@ -7,7 +7,6 @@ export async function createPoll(somePastPoll) {
     const response = await client
         .from('polling_station')
         .insert(somePastPoll);
-
     return response.body;
 }
 
@@ -15,7 +14,6 @@ export async function getPolls() {
     const response = await client 
         .from('polling_station')
         .select('*');
-
     return response.body;
 }
 
@@ -24,7 +22,6 @@ export async function signUp(someEmail, somePassword) {
         email: someEmail,
         password: somePassword,
     });
-
     return response;
 }
 
@@ -33,13 +30,11 @@ export async function signIn(someEmail, somePassword) {
         email: someEmail,
         password: somePassword,
     });
-
     return response;
 }
 
 export function getUser() {
     const user = client.auth.user();
-
     return user;
 }
 
@@ -49,7 +44,6 @@ export async function logout() {
 
 export function redirectIfNotLoggedIn() {
     const user = getUser();
-
     if (!user) {
         window.location.href = '../';
     }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section class="create-poll-area">
+            <form class="poll-input">
+                <label>
+                    Enter a question to poll!
+                    <input name="question-entry">
+                </label>
+                <label>
+                    Enter option 1!
+                    <input name="option1-entry">
+                </label>
+                <label>
+                    Enter option 2!
+                    <input name="option2-entry">
+                </label>
+            </form>
+        </section>
+        <section class="current-poll-area">
+            <div class="current-question">Current Question</div>
+            <div class="current-options">
+                <div class="option1">Option 1</div>
+                <div class="option2">Option 2</div>
+            </div>
+            <div class="buttons-count">
+                <button class="add-1">+</button>
+                <button class="subtract-1">-</button>
+                <div class="count-1"></div>
+                <div class="count-2"></div>
+                <button class="add-2">+</button>
+                <button class="subtract-2">-</button>
+            </div>
+        </section>
+        <section class="past-poll-holder">
+            <div class="past-polls"></div>
+        </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>

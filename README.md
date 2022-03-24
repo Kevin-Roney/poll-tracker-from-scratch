@@ -34,8 +34,8 @@ Additional considerations:
 **GENERAL GAMEPLAN**
 1. Get general plan figured out through wireframes and deploy to netlify [✔️]
 2. Get supabase set up with columns and user auth [✔️]
-3. fetch-utils []
-4. work on getting login page all set up and working []
+3. fetch-utils [✔️]
+4. work on getting login page all set up and working [✔️]
 5. set up polls folder and app.js []
 6. rig up render utils and export to /polls/apps.js []
 7. finish app.js in polls and bug hunt []
