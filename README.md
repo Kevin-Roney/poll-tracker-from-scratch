@@ -38,7 +38,7 @@ Additional considerations:
 4. work on getting login page all set up and working [✔️]
 5. set up polls folder and app.js [✔️]
 6. rig up render utils and export to /polls/apps.js [✔️]
-7. finish app.js in polls and bug hunt []
+7. finish app.js in polls and bug hunt [✔️]
 8. CSS []
 9. **polish** []
 10. profit []

@@ -22,9 +22,9 @@ const option2Count = document.querySelector('.count-2');
 const pastPollsEl = document.querySelector('.past-polls');
 const logoutBtn = document.querySelector('.logout');
 
-let question = '';
-let option1 = '';
-let option2 = '';
+let question = 'Question';
+let option1 = 'Option 1';
+let option2 = 'Option 2';
 let count1 = 0;
 let count2 = 0;
 
@@ -38,22 +38,22 @@ window.addEventListener('load', async () => {
 
 add1button.addEventListener('click', () => {
     count1++;
-    option1Count.textContent = count1;
+    displayCurrentPollEl();
 });
 
 add2button.addEventListener('click', () => {
     count2++;
-    option2Count.textContent = count2;
+    displayCurrentPollEl();
 });
 
 sub1button.addEventListener('click', () => {
     count1--;
-    option1Count.textContent = count1;
+    displayCurrentPollEl();
 });
 
 sub2button.addEventListener('click', () => {
     count2--;
-    option2Count.textContent = count2;
+    displayCurrentPollEl();
 });
 
 pollFormEl.addEventListener('submit', (e) => {
@@ -66,17 +66,31 @@ pollFormEl.addEventListener('submit', (e) => {
     option2 = data.get('option2-entry');
     
 
-    questionEl.textContent = question;
-    option1El.textContent = option1;
-    option2El.textContent = option2;
+    displayCurrentPollEl();
     pollFormEl.reset();
 });
 
 publishBtn.addEventListener('click', async () => {
+    
     await createPoll(question, option1, option2, count1, count2);
-
+    question = '';
+    option1 = '';
+    option2 = '';
+    count1 = 0;
+    count2 = 0;
+    option1Count.textContent = count1;
+    option2Count.textContent = count2;
+    displayCurrentPollEl();
     displayPolls();
 });
+
+function displayCurrentPollEl() {
+    questionEl.textContent = question;
+    option1El.textContent = option1;
+    option2El.textContent = option2;
+    option1Count.textContent = count1;
+    option2Count.textContent = count2;
+}
 
 async function displayPolls() {
     const polls = await getPolls();
