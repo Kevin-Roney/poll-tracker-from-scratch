@@ -22,7 +22,7 @@ export async function signUp(someEmail, somePassword) {
         email: someEmail,
         password: somePassword,
     });
-    return response;
+    return response.user;
 }
 
 export async function signIn(someEmail, somePassword) {
@@ -30,7 +30,7 @@ export async function signIn(someEmail, somePassword) {
         email: someEmail,
         password: somePassword,
     });
-    return response;
+    return response.user;
 }
 
 export function getUser() {

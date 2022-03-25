@@ -17,9 +17,10 @@ signUpForm.addEventListener('submit', async (e) => {
         window.location.href = './polls';
     }
 });
-signInForm.addEventListener('submit', async () => {
+signInForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
     const data = new FormData(signInForm);
-    await signIn (data.get('email'), data.get('password'));
+    await signIn(data.get('email'), data.get('password'));
     const user = getUser();
     if (user) {
         window.location.href = './polls';
