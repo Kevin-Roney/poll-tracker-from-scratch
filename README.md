@@ -40,5 +40,5 @@ Additional considerations:
 6. rig up render utils and export to /polls/apps.js [✔️]
 7. finish app.js in polls and bug hunt [✔️]
 8. CSS []
-9. **polish** []
+9. **polish** [✔️]
 10. profit []

@@ -18,7 +18,8 @@ export function renderPolls(poll) {
         OptionOneEl,
         VotesOneEl,
         OptionTwoEl,
-        VotesTwoEl,);
+        VotesTwoEl,
+    );
 
     return PollEl;
 }
