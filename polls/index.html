@@ -12,11 +12,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <title>Document</title>
 </head>
-
+<header>
+    <button class="logout">Logout!</button>
+</header>
 <body>
     <main>
         <section class="create-poll-area">
-            <form class="poll-input">
+            <form id="poll-input">
                 <label>
                     Enter a question to poll!
                     <input name="question-entry">
@@ -45,6 +47,9 @@
                 <div class="count-2"></div>
                 <button class="add-2">+</button>
                 <button class="subtract-2">-</button>
+            </div>
+            <div>
+                <button class="publish-poll">Publish!</button>
             </div>
         </section>
         <section class="past-poll-holder">

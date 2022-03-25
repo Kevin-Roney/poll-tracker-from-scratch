@@ -1,24 +1,24 @@
 export function renderPolls(poll) {
-    const div = document.createElement('div');
-    const questionDiv = renderOption(poll.question);
-    const option1Div = renderOption(poll.option1, poll.count1);
-    const option2Div = renderOption(poll.option2, poll.count2);
+    const PollEl = document.createElement('div');
+    const QuestionEl = document.createElement('p');
+    const OptionOneEl = document.createElement('p');
+    const OptionTwoEl = document.createElement('p');
+    const VotesOneEl = document.createElement('p');
+    const VotesTwoEl = document.createElement('p');
 
-    div.append(questionDiv, option1Div, option2Div);
-    div.classList.add('current-poll-area');
+    PollEl.classList.add('poll');
+    QuestionEl.textContent = poll.poll_question;
+    OptionOneEl.textContent = poll.poll_option_1;
+    OptionTwoEl.textContent = poll.poll_option_2;
+    VotesOneEl.textContent = poll.option_1_counts;
+    VotesTwoEl.textContent = poll.option_2_counts;
 
-    return div;
-}
+    PollEl.append(
+        QuestionEl,
+        OptionOneEl,
+        VotesOneEl,
+        OptionTwoEl,
+        VotesTwoEl,);
 
-export function renderOption(question, option, count) {
-    const pollDiv = document.createElement('div');
-    const questionDiv = document.createElement('p');
-    const optionDiv = document.createElement('p');
-    const countDiv = document.createElement('p');
-
-    questionDiv.textContent = question;
-    optionDiv.textContent = option;
-    countDiv.textContent = count;
-    
-    return pollDiv;
+    return PollEl;
 }
