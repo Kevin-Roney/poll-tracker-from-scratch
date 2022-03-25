@@ -73,9 +73,9 @@ pollFormEl.addEventListener('submit', (e) => {
 publishBtn.addEventListener('click', async () => {
     
     await createPoll(question, option1, option2, count1, count2);
-    question = '';
-    option1 = '';
-    option2 = '';
+    question = 'Question';
+    option1 = 'Option 1';
+    option2 = 'Option 2';
     count1 = 0;
     count2 = 0;
     option1Count.textContent = count1;

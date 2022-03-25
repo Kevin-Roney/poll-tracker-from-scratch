@@ -1,6 +1,6 @@
 export function renderPolls(poll) {
     const PollEl = document.createElement('div');
-    const QuestionEl = document.createElement('p');
+    const QuestionEl = document.createElement('h3');
     const OptionOneEl = document.createElement('p');
     const OptionTwoEl = document.createElement('p');
     const VotesOneEl = document.createElement('p');

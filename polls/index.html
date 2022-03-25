@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/home.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <title>Document</title>
+    <title>Polling Station!</title>
 </head>
 <header>
     <button class="logout">Logout!</button>
 </header>
 <body>
     <main>
+        <h1>Welcome to the Polling Station!</h1>
         <section class="create-poll-area">
             <form id="poll-input">
                 <label>
@@ -36,17 +37,19 @@
         </section>
         <section class="current-poll-area">
             <div class="current-question">Current Question</div>
-            <div class="current-options">
-                <div class="option1">Option 1</div>
-                <div class="option2">Option 2</div>
-            </div>
             <div class="buttons-count">
-                <button class="add-1">+</button>
-                <button class="subtract-1">-</button>
-                <div class="count-1"></div>
-                <div class="count-2"></div>
-                <button class="add-2">+</button>
-                <button class="subtract-2">-</button>
+                <div>
+                    <div class="option1">Option 1</div>
+                    <button class="add-1">+</button>
+                    <button class="subtract-1">-</button>
+                    <div class="count-1"></div>
+                </div>
+                <div>
+                    <div class="option2">Option 2</div>
+                    <button class="add-2">+</button>
+                    <button class="subtract-2">-</button>
+                    <div class="count-2"></div>
+                </div>
             </div>
             <div>
                 <button class="publish-poll">Publish!</button>

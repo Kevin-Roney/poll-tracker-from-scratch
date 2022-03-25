@@ -28,7 +28,6 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
 }
 
 main {
@@ -36,21 +35,14 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    background-image: url(/assets/background.jpg);
 }
 
 section {
-    background-color: var(--color5);
     max-width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
-    margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
 
 header {
@@ -58,9 +50,11 @@ header {
     justify-content: flex-end;
     background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
+    
 }
-
+h1 {
+    color: aliceblue;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -75,17 +69,49 @@ header img {
     height: var(--header-height);
 }
 
-p {
-    margin: var(--gutter);
+.buttons-count {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 20px;
 }
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+.current-poll-area {
     box-shadow: var(--shadow);
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.801);
+}
+.poll {
+    box-shadow: var(--shadow);
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.808);
+}
+.past-polls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#poll-input {
+    background-color: rgba(252, 252, 252, 0.808);
+    padding: 15px;
+    border-radius: 20px;
+    display: inline-block;
+}
+.sign-in {
+    display: inline-block;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.808);
+}
+.sign-up {
+    display: inline-block;
+    box-shadow: var(--shadow);
+    padding: 15px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.808);
 }
