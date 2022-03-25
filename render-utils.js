@@ -10,8 +10,8 @@ export function renderPolls(poll) {
     QuestionEl.textContent = poll.poll_question;
     OptionOneEl.textContent = poll.poll_option_1;
     OptionTwoEl.textContent = poll.poll_option_2;
-    VotesOneEl.textContent = poll.option_1_counts;
-    VotesTwoEl.textContent = poll.option_2_counts;
+    VotesOneEl.textContent = poll.option_1_count;
+    VotesTwoEl.textContent = poll.option_2_count;
 
     PollEl.append(
         QuestionEl,

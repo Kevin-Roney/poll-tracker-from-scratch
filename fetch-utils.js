@@ -3,18 +3,26 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const SUPABASE_URL = 'https://mehoppuauhpwwofefpdc.supabase.co';
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-export async function createPoll(somePastPoll) {
+export async function createPoll(question, option1, option2, count1, count2) {
     const response = await client
         .from('polling_station')
-        .insert(somePastPoll);
-    return response.body;
+        .insert([
+            {
+                poll_question: question,
+                poll_option_1: option1,
+                poll_option_2: option2,
+                option_1_count: count1,
+                option_2_count: count2
+            }
+        ]);
+    return response.data;
 }
 
 export async function getPolls() {
     const response = await client 
         .from('polling_station')
         .select('*');
-    return response.body;
+    return response.data;
 }
 
 export async function signUp(someEmail, somePassword) {
@@ -40,6 +48,8 @@ export function getUser() {
 
 export async function logout() {
     await client.auth.signOut();
+
+    return window.location.href = '../';
 }
 
 export function redirectIfNotLoggedIn() {
